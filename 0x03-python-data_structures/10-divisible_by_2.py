@@ -2,8 +2,8 @@
 def divisible_by_2(my_list=[]):
     new = []
     for i in my_list:
-        if i%2 == 1:
+        if i % 2 == 1:
             new.append("False")
-        if i%2 == 0:
+        else:
             new.append("True")
     return new
