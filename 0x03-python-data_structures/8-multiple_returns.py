@@ -4,5 +4,5 @@ def multiple_returns(sentence):
         return 0, None
     else:
         i = len(sentence)
-        j = sentence[:1{
+        j = sentence[:1]
         return i, j
