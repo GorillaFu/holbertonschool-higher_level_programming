@@ -5,7 +5,7 @@
 class Rectangle:
     """ Rectanhle class with pvt height+width attributes """
     number_of_instances = 0
-    print_sumbol = "#"
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """ constructor func """
