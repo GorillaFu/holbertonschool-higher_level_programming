@@ -1,13 +1,13 @@
 >>> print(add_integer(1, 2))
 3
->>> print(add_integer(100, -2))
-98
+>>> print(add_integer(3, -2))
+1
 >>> print(add_integer(2))
 100
->>> print(add_integer(100.2, -2))
+>>> print(add_integer(100.4, -2))
 98
 >>> try:
-...    print(add_integer(4, "School"))
+...    print(add_integer(4, "asdf"))
 ... except Exception as e:
 ...    print(e)
 ...
@@ -19,7 +19,7 @@ b must be an integer
 ...
 a must be an integer
 >>> try:
-...    print(add_integer(4.3, "School"))
+...    print(add_integer(5.1, "asdf"))
 ... except Exception as e:
 ...    print(e)
 ...
