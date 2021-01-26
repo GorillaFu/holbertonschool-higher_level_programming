@@ -81,3 +81,10 @@ class Rectangle(Base):
         while i < j:
             print("#" * self.width, end="\n")
             i = i + 1
+
+    def __str__(self):
+        """
+        Print string representation of attributes
+        """
+        magic = "[Rectangle] ({}) {}/{} - {}/{}"
+        return magic.format(self.id, self.__x, self.__y, self.__width, self.__height)
