@@ -75,12 +75,9 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """"Draws the rectangle"""
-        j = self.__height
-        i = 0
-        while i < j:
-            print("#" * self.width, end="\n")
-            i = i + 1
+        """"Draws the rectangle + x y translation"""
+        print("\n" * self.y, end="")
+        print((" " * self.x + "#" * self.width + '\n') * self.height, end="")
 
     def __str__(self):
         """
@@ -89,3 +86,17 @@ class Rectangle(Base):
         fmat = "[Rectangle] ({}) {}/{} - {}/{}"
         s =  fmat.format(self.id, self.x, self.y, self.width, self.height)
         return s
+
+    def update(self, *args, **kwargs):
+        """Updates rectangle"""
+        if not args and not kwargs:
+            return
+        if args:
+            param = ["id", "width", "height", "x", "y"]
+            for i, atr in enumerate(args):
+                if i < len(param):
+                    setattr(self, param[i], atr)
+        else:
+            for j, val in kwargs.items():
+                if hasattr(self, j):
+                    setattr(self, j, val)
