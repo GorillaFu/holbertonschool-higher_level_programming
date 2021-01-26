@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""define a base  class for making subclasses"""
+
+
+class Base:
+    """base class"""
+    def __init__(self, id=None):
+        self.id = None
+        print (self.id)
