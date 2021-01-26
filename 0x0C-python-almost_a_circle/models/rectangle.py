@@ -86,5 +86,6 @@ class Rectangle(Base):
         """
         Print string representation of attributes
         """
-        magic = "[Rectangle] ({}) {}/{} - {}/{}"
-        return magic.format(self.id, self.__x, self.__y, self.__width, self.__height)
+        fmat = "[Rectangle] ({}) {}/{} - {}/{}"
+        s =  fmat.format(self.id, self.x, self.y, self.width, self.height)
+        return s
