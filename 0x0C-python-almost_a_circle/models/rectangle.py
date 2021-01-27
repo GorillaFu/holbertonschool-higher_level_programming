@@ -107,8 +107,6 @@ class Rectangle(Base):
 
         for i, val in self.__dict__.items():
             if i.startswith("_"):
-                print (i)
-                print (val)
                 result[i.split("__")[-1]] = val
             else:
                 result[i] = val
