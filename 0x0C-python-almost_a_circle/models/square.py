@@ -40,3 +40,10 @@ class Square(Rectangle):
             for j, val in kwargs.items():
                 if hasattr(self, j):
                     setattr(self, j, val)
+    def to_dictionary(self):
+        """square to dictionary"""
+        dic = super().to_dictionary()
+        dic["size"] = dic["width"]
+        del dic["width"]
+        del dic["height"]
+        return dic
