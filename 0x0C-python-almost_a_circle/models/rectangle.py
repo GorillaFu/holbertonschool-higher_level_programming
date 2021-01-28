@@ -84,7 +84,7 @@ class Rectangle(Base):
         Print string representation of attributes
         """
         fmat = "[Rectangle] ({}) {}/{} - {}/{}"
-        s =  fmat.format(self.id, self.x, self.y, self.width, self.height)
+        s = fmat.format(self.id, self.x, self.y, self.width, self.height)
         return s
 
     def update(self, *args, **kwargs):
