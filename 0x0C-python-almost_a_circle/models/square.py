@@ -14,7 +14,7 @@ class Square(Rectangle):
     def __str__(self):
         """String representation of a square"""
         fmat = "[Square] ({}) {}/{} - {}"
-        s =  fmat.format(self.id, self.x, self.y, self.width)
+        s = fmat.format(self.id, self.x, self.y, self.width)
         return s
 
     @property
@@ -40,6 +40,7 @@ class Square(Rectangle):
             for j, val in kwargs.items():
                 if hasattr(self, j):
                     setattr(self, j, val)
+
     def to_dictionary(self):
         """square to dictionary"""
         dic = super().to_dictionary()
