@@ -17,14 +17,14 @@ module.exports = class Rectangle {
     }
   }
 
-  //swaps vals of heght and width
+  // swaps vals of heght and width
   rotate () {
     const store = this.width;
     this.width = this.height;
     this.height = store;
   }
 
-  //doubles height and wdth of rect
+  // doubles height and wdth of rect
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
