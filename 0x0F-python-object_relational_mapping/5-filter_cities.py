@@ -9,8 +9,14 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost",
                          user=user, passwd=password, db=database)
     db = db.cursor()
-    db.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN\
-    states ON cities.state_id=states.id")
+    db.execute("""
+    SELECT cities.name
+    FROM cities
+    JOIN states
+    ON state_id=states.id
+    WHERE states.name LIKE BINARY %s
+    ORDER BY cities.id
+    """, (state,))
 
     r = db.fetchall()
     print(", ".join([row[0] for row in r]))
