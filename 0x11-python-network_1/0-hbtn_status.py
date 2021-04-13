@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # python script that fetches url content and displays in specified format
-import urllib.request
+import urllib
 
 with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
    html = response.read()
