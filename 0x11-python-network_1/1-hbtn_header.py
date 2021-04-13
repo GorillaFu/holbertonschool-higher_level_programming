@@ -3,6 +3,7 @@
 import urllib.request
 import sys
 
+# script
 with urllib.request.urlopen(sys.argv[1]) as response:
     html = response.headers['X-Request-Id']
     print(html)
